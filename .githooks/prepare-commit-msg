@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [[ "$(git config --get my.interactive)" = yes ]];then
+    # git -c my.interactive=yes commit
+
+    exec < /dev/tty deno run --allow-net --allow-write --allow-run demo/fill_in_commit_message/gitmoji_style.ts
+fi

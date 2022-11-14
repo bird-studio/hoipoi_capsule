@@ -1,0 +1,10 @@
+{
+  "imports": {
+    "~/": "./",
+    "@/path/": "https://deno.land/std@0.157.0/path/",
+    "@/prompt/": "https://deno.land/x/cliffy@v0.25.4/prompt/",
+    "@/table/": "https://deno.land/x/cliffy@v0.25.4/table/",
+    "@/colors": "https://deno.land/x/cliffy@v0.25.4/ansi/colors.ts",
+    "@/wait": "https://deno.land/x/wait@0.1.12/mod.ts"
+  }
+}
