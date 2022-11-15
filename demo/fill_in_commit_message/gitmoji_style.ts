@@ -1,7 +1,6 @@
 //  deno run --allow-net --allow-write --allow-run demo/fill_in_commit_message/gitmoji_style.ts
 
-import { useCase } from "~/mod.ts";
-import * as gitmojiStyle from "~/src/use_case/fill_in_commit_message/gitmoji_style/mod.ts";
+import { preset, useCase } from "~/mod.ts";
 
 const commitMessageTemplate = `{{gitmoji}}: {{summary}} {{issue}}
 
@@ -12,21 +11,23 @@ useCase.fillInCommitMessage.run({
   questionList: [
     {
       target: "gitmoji",
-      q: gitmojiStyle.qMap.gitmoji,
+      q: preset.fillInCommitMessage.gitmojiStyle.qMap.gitmoji,
     },
     {
       target: "summary",
-      q: gitmojiStyle.qMap.summary,
+      q: preset.fillInCommitMessage.gitmojiStyle.qMap.summary,
     },
     {
       target: "issue",
-      q: gitmojiStyle.qMap.issue,
-      fixCommitMessage: gitmojiStyle.fixCommitMessageMap.issue,
+      q: preset.fillInCommitMessage.gitmojiStyle.qMap.issue,
+      fixCommitMessage:
+        preset.fillInCommitMessage.gitmojiStyle.fixCommitMessageMap.issue,
     },
     {
       target: "body",
-      q: gitmojiStyle.qMap.bodyQ,
-      fixCommitMessage: gitmojiStyle.fixCommitMessageMap.body,
+      q: preset.fillInCommitMessage.gitmojiStyle.qMap.bodyQ,
+      fixCommitMessage:
+        preset.fillInCommitMessage.gitmojiStyle.fixCommitMessageMap.body,
     },
   ],
 });
