@@ -4,14 +4,14 @@ import * as git from "~/src/external_interface/git.ts";
 import type * as type from "./type.ts";
 
 type FillInCommitMessage = (p: {
-  qList: type.QList;
+  questionList: type.QuestionList;
   commitMessage: string;
   answerMap: Record<string, string>;
 }) => Promise<type.CommitMessage>;
 const fillInCommitMessage: FillInCommitMessage = async (p) => {
   console.clear();
 
-  const [qObj, ...qList] = p.qList;
+  const [qObj, ...questionList] = p.questionList;
   if (qObj == null) {
     return p.commitMessage;
   }
@@ -46,21 +46,22 @@ const fillInCommitMessage: FillInCommitMessage = async (p) => {
   })();
 
   return fillInCommitMessage({
-    qList,
+    questionList,
     commitMessage,
     answerMap,
   });
 };
 
 type Run = (
-  p: Pick<Parameters<FillInCommitMessage>[0], "qList"> & {
-    commitMessageTemplate: Parameters<FillInCommitMessage>[0]["commitMessage"];
+  p: {
+    questionList: type.QuestionList;
+    commitMessageTemplate: string;
   },
 ) => Promise<void>;
 export const run: Run = (p) =>
   fillInCommitMessage({
     answerMap: {},
-    qList: p.qList,
+    questionList: p.questionList,
     commitMessage: p.commitMessageTemplate,
   })
     .then((commitMessage) => {

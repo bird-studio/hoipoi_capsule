@@ -39,7 +39,7 @@ const body = () =>
     message: "Enter body",
   });
 
-export const qList: type.QList = [
+export const questionList: type.QuestionList = [
   {
     target: "gitmoji",
     q: gitmoji,

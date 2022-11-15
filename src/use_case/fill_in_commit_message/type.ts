@@ -1,7 +1,7 @@
 type Answer = string | number;
 export type CommitMessage = string;
 
-export type QList = ReadonlyArray<
+export type QuestionList = ReadonlyArray<
   {
     target: string;
     q: () => Promise<Answer>;

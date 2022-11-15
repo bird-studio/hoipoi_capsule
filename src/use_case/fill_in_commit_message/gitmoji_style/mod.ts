@@ -1,1 +1,1 @@
-export { commitMessageTemplate, qList } from "./asset.ts";
+export { commitMessageTemplate, questionList } from "./asset.ts";
