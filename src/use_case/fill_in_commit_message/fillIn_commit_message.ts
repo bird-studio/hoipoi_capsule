@@ -1,8 +1,6 @@
-import * as asset from "./asset.ts";
 import * as error from "~/src/util/error.ts";
 import * as prompt from "~/src/user_interface/prompt.ts";
 import * as git from "~/src/external_interface/git.ts";
-
 import type * as type from "./type.ts";
 
 type FillInCommitMessage = (p: {
@@ -54,18 +52,16 @@ const fillInCommitMessage: FillInCommitMessage = async (p) => {
   });
 };
 
-type Exec = (
-  p?: Pick<Parameters<FillInCommitMessage>[0], "qList"> & {
+type Run = (
+  p: Pick<Parameters<FillInCommitMessage>[0], "qList"> & {
     commitMessageTemplate: Parameters<FillInCommitMessage>[0]["commitMessage"];
   },
 ) => Promise<void>;
-export const exec: Exec = (p) =>
+export const run: Run = (p) =>
   fillInCommitMessage({
-    qList: p?.qList ? p.qList : asset.qList,
-    commitMessage: p?.commitMessageTemplate
-      ? p.commitMessageTemplate
-      : asset.commitMessageTemplate,
     answerMap: {},
+    qList: p.qList,
+    commitMessage: p.commitMessageTemplate,
   })
     .then((commitMessage) => {
       git.setCommitMessage({ message: commitMessage });

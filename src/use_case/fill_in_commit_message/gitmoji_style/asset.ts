@@ -1,5 +1,5 @@
 import * as prompt from "~/src/user_interface/prompt.ts";
-import type * as type from "./type.ts";
+import type * as type from "../type.ts";
 import { initialize, skip } from "./util.ts";
 
 const options = await initialize();
