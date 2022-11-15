@@ -5,6 +5,8 @@
 ### Demonstrate fill in commit message
 
 ```bash
+# cd your/project/directory
+
 deno run --allow-net --allow-write --allow-run --import-map="https://deno.land/x/hoipoi_capsule/import_map.json?source" "https://deno.land/x/hoipoi_capsule/demo/fill_in_commit_message/gitmoji_style.ts?source"
 ```
 
