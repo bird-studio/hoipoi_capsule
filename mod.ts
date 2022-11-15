@@ -7,7 +7,7 @@ import * as gitmoji from "~/src/external_interface/gitmoji.ts";
 import * as prompt from "~/src/user_interface/prompt.ts";
 
 // use_case
-import * as gitmojiStyle from "~/src/use_case/fill_in_commit_message/gitmoji_style/mod.ts";
+import * as fillInCommitMessage from "~/src/use_case/fill_in_commit_message/mod.ts";
 
 export const externalInterface = {
   git,
@@ -20,7 +20,5 @@ export const userInterface = {
 } as const;
 
 export const useCase = {
-  fillInCommitMessage: {
-    gitmojiStyle,
-  },
+  fillInCommitMessage,
 } as const;

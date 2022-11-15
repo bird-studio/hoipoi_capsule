@@ -1,5 +1,5 @@
 import * as prompt from "~/src/user_interface/prompt.ts";
-import type * as type from "./type.ts";
+import type * as type from "../type.ts";
 import { initialize, skip } from "./util.ts";
 
 const options = await initialize();
@@ -10,17 +10,18 @@ export const commitMessageTemplate = `{{gitmoji}}: {{subject}} {{issue}}
 
 const gitmoji = () =>
   prompt.Select.prompt({
-    message: "gitmoji",
+    message: "Select gitmoji.",
     search: true,
     options: options.gitmojis,
   });
 
 const subject = () =>
   prompt.Input.prompt({
-    message: "subject",
+    message: "Enter subject.",
     validate: (p) => {
-      if (p.length < 3) {
-        return "Please enter at least 3 characters.";
+      const minLen = 3;
+      if (p.length < minLen) {
+        return `Please enter at least ${minLen} characters.`;
       }
       return true;
     },
@@ -28,17 +29,17 @@ const subject = () =>
 
 const issue = () =>
   prompt.Select.prompt({
-    message: "issue",
+    message: "Select issue.",
     search: true,
     options: options.issues,
   });
 
 const body = () =>
   prompt.Input.prompt({
-    message: "body",
+    message: "Enter body",
   });
 
-export const qList: type.QList = [
+export const questionList: type.QuestionList = [
   {
     target: "gitmoji",
     q: gitmoji,

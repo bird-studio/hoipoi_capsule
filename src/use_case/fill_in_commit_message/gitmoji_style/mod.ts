@@ -1,1 +1,1 @@
-export { exec } from "./main.ts";
+export { commitMessageTemplate, questionList } from "./asset.ts";

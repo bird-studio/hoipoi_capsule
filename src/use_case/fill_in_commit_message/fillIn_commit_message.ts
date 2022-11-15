@@ -1,19 +1,17 @@
-import * as asset from "./asset.ts";
 import * as error from "~/src/util/error.ts";
 import * as prompt from "~/src/user_interface/prompt.ts";
 import * as git from "~/src/external_interface/git.ts";
-
 import type * as type from "./type.ts";
 
 type FillInCommitMessage = (p: {
-  qList: type.QList;
+  questionList: type.QuestionList;
   commitMessage: string;
   answerMap: Record<string, string>;
 }) => Promise<type.CommitMessage>;
 const fillInCommitMessage: FillInCommitMessage = async (p) => {
   console.clear();
 
-  const [qObj, ...qList] = p.qList;
+  const [qObj, ...questionList] = p.questionList;
   if (qObj == null) {
     return p.commitMessage;
   }
@@ -48,24 +46,23 @@ const fillInCommitMessage: FillInCommitMessage = async (p) => {
   })();
 
   return fillInCommitMessage({
-    qList,
+    questionList,
     commitMessage,
     answerMap,
   });
 };
 
-type Exec = (
-  p?: Pick<Parameters<FillInCommitMessage>[0], "qList"> & {
-    commitMessageTemplate: Parameters<FillInCommitMessage>[0]["commitMessage"];
+type Run = (
+  p: {
+    questionList: type.QuestionList;
+    commitMessageTemplate: string;
   },
 ) => Promise<void>;
-export const exec: Exec = (p) =>
+export const run: Run = (p) =>
   fillInCommitMessage({
-    qList: p?.qList ? p.qList : asset.qList,
-    commitMessage: p?.commitMessageTemplate
-      ? p.commitMessageTemplate
-      : asset.commitMessageTemplate,
     answerMap: {},
+    questionList: p.questionList,
+    commitMessage: p.commitMessageTemplate,
   })
     .then((commitMessage) => {
       git.setCommitMessage({ message: commitMessage });
