@@ -33,29 +33,27 @@ export const initialize = () => {
     gitHub.fetchIssues(),
   ])
     .then(
-      ([{ gitmojis }, issues]) => {
-        return {
-          issues: [
-            util.skip,
-            util.separate,
-            ...issues.map((v) => ({
-              name: `#${v.number} ${v.title}`,
-              value: `Close #${v.number}`,
-            })),
-          ],
-          gitmojis: gitmojis
-            .map((v) => ({
-              ...v,
-              semver: findSemver(v.semver),
-            }))
-            .map((v) => ({
-              name: `${v.emoji}[${
-                v.semver.replaceAll(".", "")
-              }]: ${v.description}`,
-              value: `${v.code}[${v.semver}]`,
-            })),
-        };
-      },
+      ([{ gitmojis }, issues]) => ({
+        issues: [
+          util.skip,
+          util.separate,
+          ...issues.map((v) => ({
+            name: `#${v.number} ${v.title}`,
+            value: `Close #${v.number}`,
+          })),
+        ],
+        gitmojis: gitmojis
+          .map((v) => ({
+            ...v,
+            semver: findSemver(v.semver),
+          }))
+          .map((v) => ({
+            name: `${v.emoji}[${
+              v.semver.replaceAll(".", "")
+            }]: ${v.description}`,
+            value: `${v.code}[${v.semver}]`,
+          })),
+      }),
     )
     .catch(error.throwError)
     .finally(() => {
