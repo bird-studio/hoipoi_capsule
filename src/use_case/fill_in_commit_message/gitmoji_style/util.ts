@@ -2,6 +2,7 @@ import { wait } from "@/wait";
 import * as gitmoji from "~/src/external_interface/gitmoji.ts";
 import * as gitHub from "~/src/external_interface/gitHub.ts";
 import * as error from "~/src/util/error.ts";
+import * as util from "../util.ts";
 
 const findSemver = (p: string | null) => {
   if (p === null) {
@@ -23,14 +24,6 @@ const findSemver = (p: string | null) => {
   return "_._._";
 };
 
-export const skip = { name: "-skip-", value: "-skip-" };
-
-const separate = {
-  name: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
-  value: "",
-  disabled: true,
-};
-
 export const initialize = () => {
   console.clear();
   const spinner = wait("Initializing...").start();
@@ -43,8 +36,8 @@ export const initialize = () => {
       ([{ gitmojis }, issues]) => {
         return {
           issues: [
-            skip,
-            separate,
+            util.skip,
+            util.separate,
             ...issues.map((v) => ({
               name: `#${v.number} ${v.title}`,
               value: `Close #${v.number}`,

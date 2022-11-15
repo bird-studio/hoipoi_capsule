@@ -1,1 +1,1 @@
-export { commitMessageTemplate, questionList } from "./asset.ts";
+export { fixCommitMessageMap, qMap } from "./preset.ts";
