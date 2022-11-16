@@ -21,6 +21,8 @@ export const useCase = {
 } as const;
 
 export const preset = {
-  conventionalcommits,
-  gitmojiStyle,
+  fillInCommitMessage: {
+    conventionalcommits,
+    gitmojiStyle,
+  },
 } as const;

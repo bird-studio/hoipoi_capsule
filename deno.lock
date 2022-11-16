@@ -64,6 +64,6 @@
     "https://deno.land/x/wait@0.1.12/log_symbols.ts": "cdf2d0aa44754d10fddd55999e933886a4d753f2acfc1219f629427ccc776ac7",
     "https://deno.land/x/wait@0.1.12/mod.ts": "83211441439cd0f794f4e95fbb6c766929dd6886169100d3bdf2ea1ea5e3adfe",
     "https://deno.land/x/wait@0.1.12/spinners.ts": "289346d54f8d6152a5dcd67b67e47784cf9b7a8a8f6f0b6dc041ebc2ef6bb76c",
-    "https://raw.githubusercontent.com/carloscuesta/gitmoji/master/src/data/gitmojis.json": "6c2f1d0b0c624dc3ab8aaa38544efa3fe5bcd793098625397a696f1de2a10358"
+    "https://raw.githubusercontent.com/carloscuesta/gitmoji/master/src/data/gitmojis.json": "0342e65002e8a0edafe163731fb1d491db724295f272b4453678593c67cb3cf9"
   }
 }
