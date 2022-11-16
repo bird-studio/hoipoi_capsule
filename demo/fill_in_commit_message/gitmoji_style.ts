@@ -2,7 +2,7 @@
 
 import { preset, useCase } from "../../mod.ts";
 
-const commitMessageTemplate = `{{gitmoji}}: {{summary}} {{issue}}
+const commitMessageTemplate = `{{gitmoji}}: {{summary}} Close #{{issue}}
 
 {{body}}`;
 
