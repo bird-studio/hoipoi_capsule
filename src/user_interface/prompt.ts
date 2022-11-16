@@ -1,8 +1,8 @@
-import { Table } from "@/table/mod.ts";
-import { colors } from "@/colors";
+import { colors, prompt, Table } from "../../deps.ts";
 
-export { Input } from "@/prompt/input.ts";
-export { Select } from "@/prompt/select.ts";
+export { wait } from "../../deps.ts";
+export const Input = prompt.Input;
+export const Select = prompt.Select;
 
 const highlighter = (p: { value: string; target: string }) =>
   p.value

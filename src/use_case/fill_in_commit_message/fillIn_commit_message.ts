@@ -1,6 +1,6 @@
-import * as error from "~/src/util/error.ts";
-import * as prompt from "~/src/user_interface/prompt.ts";
-import * as git from "~/src/external_interface/git.ts";
+import * as error from "../../util/error.ts";
+import * as prompt from "../../user_interface/prompt.ts";
+import * as git from "../../external_interface/git.ts";
 import type * as type from "./type.ts";
 
 type FillInCommitMessage = (p: {

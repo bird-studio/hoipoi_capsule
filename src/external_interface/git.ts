@@ -1,6 +1,6 @@
-import * as path from "@/path/mod.ts";
+import { path } from "../../deps.ts";
 import * as deno from "./deno.ts";
-import * as error from "~/src/util/error.ts";
+import * as error from "../util/error.ts";
 
 const commitEditMsgPath = path.join(
   ".git",

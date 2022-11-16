@@ -1,4 +1,4 @@
-import * as error from "~/src/util/error.ts";
+import * as error from "../util/error.ts";
 
 export const fetchGitmojis = () =>
   import(

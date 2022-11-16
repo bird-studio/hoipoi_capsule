@@ -1,5 +1,5 @@
 import * as deno from "./deno.ts";
-import * as error from "~/src/util/error.ts";
+import * as error from "../util/error.ts";
 
 type IssuesStruct = Array<{ body: string; number: number; title: string }>;
 type FetchIssues = () =>
