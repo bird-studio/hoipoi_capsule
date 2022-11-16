@@ -38,7 +38,7 @@ git config --local core.hooksPath .githooks
 cat <<EOF > .githooks/prepare-commit-msg
 #!/bin/sh
 
-exec < /dev/tty deno run --allow-net --allow-write --allow-run deno run --allow-net --allow-write --allow-run "https://deno.land/x/hoipoi_capsule/demo/fill_in_commit_message/conventionalcommits_style.ts?source"
+exec < /dev/tty deno run --allow-net --allow-write --allow-run "https://deno.land/x/hoipoi_capsule/demo/fill_in_commit_message/conventionalcommits_style.ts?source"
 
 EOF
 ```
