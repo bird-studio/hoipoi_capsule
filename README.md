@@ -4,7 +4,9 @@
 
 Create a commit message in an interactive format.
 
-https://user-images.githubusercontent.com/92862731/201958468-dec2cf7a-8035-47b1-9668-d468641ce8be.mov
+<video controls playsinline width="100%" autoplay loop muted="true" src="https://user-images.githubusercontent.com/92862731/201958468-dec2cf7a-8035-47b1-9668-d468641ce8be.mov" type="video/mp4" >
+ Sorry, your browser doesn't support embedded videos.
+</video>
 
 ## Try
 
@@ -136,4 +138,6 @@ const typeQ = () =>
 
 - [gitmoji_style](https://github.com/bird-studio/hoipoi_capsule/blob/main/demo/fill_in_commit_message/gitmoji_style.ts)
 
-https://user-images.githubusercontent.com/92862731/202081954-dc908df9-70d8-436a-8ad9-fa5d91cd1280.mov
+<video controls playsinline width="100%" autoplay loop muted="true" src="https://user-images.githubusercontent.com/92862731/202081954-dc908df9-70d8-436a-8ad9-fa5d91cd1280.mov" type="video/mp4" >
+ Sorry, your browser doesn't support embedded videos.
+</video>
