@@ -47,7 +47,7 @@ const fixIssue: type.FixCommitMessage = (p) => {
   if (p.answerMap["issue"] !== baseUtil.skip.value) {
     return p.commitMessage;
   }
-  return p.commitMessage.replace(baseUtil.skip.value, "");
+  return p.commitMessage.replace(`Close #${baseUtil.skip.value}`, "").trim();
 };
 
 const fixBody: type.FixCommitMessage = (p) => {

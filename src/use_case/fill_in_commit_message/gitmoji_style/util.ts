@@ -38,8 +38,8 @@ export const initialize = () => {
           util.skip,
           util.separate,
           ...issues.map((v) => ({
-            name: `#${v.number} ${v.title}`,
-            value: `Close #${v.number}`,
+            name: `${v.number} ${v.title}`,
+            value: `${v.number}`,
           })),
         ],
         gitmojis: gitmojis
