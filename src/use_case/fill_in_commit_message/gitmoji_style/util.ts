@@ -1,7 +1,7 @@
-import { wait } from "@/wait";
-import * as gitmoji from "~/src/external_interface/gitmoji.ts";
-import * as gitHub from "~/src/external_interface/gitHub.ts";
-import * as error from "~/src/util/error.ts";
+import { wait } from "../../../user_interface/prompt.ts";
+import * as gitmoji from "../../../external_interface/gitmoji.ts";
+import * as gitHub from "../../../external_interface/gitHub.ts";
+import * as error from "../../../util/error.ts";
 import * as util from "../util.ts";
 
 const findSemver = (p: string | null) => {

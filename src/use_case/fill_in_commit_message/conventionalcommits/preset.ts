@@ -1,5 +1,5 @@
 import type * as type from "../type.ts";
-import * as prompt from "~/src/user_interface/prompt.ts";
+import * as prompt from "../../../user_interface/prompt.ts";
 import * as baseUtil from "../util.ts";
 
 const typeQ = () =>
