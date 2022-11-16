@@ -135,3 +135,5 @@ const typeQ = () =>
 ## Convenient Use
 
 - [gitmoji_style](https://github.com/bird-studio/hoipoi_capsule/blob/main/demo/fill_in_commit_message/gitmoji_style.ts)
+
+https://user-images.githubusercontent.com/92862731/202081954-dc908df9-70d8-436a-8ad9-fa5d91cd1280.mov
