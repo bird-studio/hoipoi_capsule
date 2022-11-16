@@ -33,7 +33,6 @@ Prepare Git hook.
 
 ```bash
 mkdir .githooks
-git config --local core.hooksPath .githooks
 
 cat <<EOF > .githooks/prepare-commit-msg
 #!/bin/sh
@@ -41,6 +40,9 @@ cat <<EOF > .githooks/prepare-commit-msg
 exec < /dev/tty deno run --allow-net --allow-write --allow-run "https://deno.land/x/hoipoi_capsule/demo/fill_in_commit_message/conventionalcommits_style.ts?source"
 
 EOF
+
+git config --local core.hooksPath .githooks
+chmod +x .githooks/prepare-commit-msg
 ```
 
 Execution.
