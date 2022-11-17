@@ -20,16 +20,14 @@ hoipoiCapsule.useCase.fillInCommitMessage.run({
     {
       target: "issue",
       q: hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle.qMap.issue,
-      fixCommitMessage:
-        hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle
-          .fixCommitMessageMap.issue,
+      fixCommitMessage: hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle
+        .fixCommitMessageMap.issue,
     },
     {
       target: "body",
       q: hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle.qMap.bodyQ,
-      fixCommitMessage:
-        hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle
-          .fixCommitMessageMap.body,
+      fixCommitMessage: hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle
+        .fixCommitMessageMap.body,
     },
   ],
 });
