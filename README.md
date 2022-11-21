@@ -60,7 +60,7 @@ Here is a reference.
 - [conventionalcommits_style](https://github.com/bird-studio/hoipoi_capsule/blob/main/demo/fill_in_commit_message/conventionalcommits_style.ts)
 
 ```ts
-import * as hoipoiCapsule from "https://deno.land/x/hoipoi_capsule@v0.5.0/mod.ts";
+import * as hoipoiCapsule from "https://deno.land/x/hoipoi_capsule/mod.ts";
 
 const commitMessageTemplate = `{{type}}({{scope}}): {{summary}}
 
