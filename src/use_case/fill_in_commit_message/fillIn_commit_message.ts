@@ -16,7 +16,7 @@ const fillInCommitMessage: FillInCommitMessage = async (p) => {
     return p.commitMessage;
   }
 
-  prompt.render({
+  await prompt.render({
     value: p.commitMessage,
     target: qObj.target,
   });
