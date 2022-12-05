@@ -1,16 +1,8 @@
 import * as prompt from "../../../user_interface/prompt.ts";
 import type * as type from "../type.ts";
-import * as util from "./util.ts";
 import * as baseUtil from "../util.ts";
 
-const options = await util.initialize();
-
-const gitmojiQ = () =>
-  prompt.Select.prompt({
-    message: "Select gitmoji.",
-    search: true,
-    options: options.gitmojis,
-  });
+export { initialize } from "./util.ts";
 
 const summaryQ = () =>
   prompt.Input.prompt({
@@ -24,22 +16,13 @@ const summaryQ = () =>
     },
   });
 
-const issueQ = () =>
-  prompt.Select.prompt({
-    message: "Select issue.",
-    search: true,
-    options: options.issues,
-  });
-
 const bodyQ = () =>
   prompt.Input.prompt({
     message: "Enter body",
   });
 
 export const qMap = {
-  gitmoji: gitmojiQ,
   summary: summaryQ,
-  issue: issueQ,
   bodyQ: bodyQ,
 } as const;
 

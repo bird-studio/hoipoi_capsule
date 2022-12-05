@@ -22,7 +22,7 @@ cat .git/COMMIT_EDITMSG
 
 Run with Git hook.
 
-It works without gh.`gh` is used to obtain github issues.Please complete the gh
+It works without gh. gh is used to obtain github issues.Please complete the gh
 setup in advance.
 
 ```bash

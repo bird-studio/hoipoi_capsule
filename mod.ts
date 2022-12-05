@@ -6,6 +6,8 @@ import * as fillInCommitMessage from "./src/use_case/fill_in_commit_message/mod.
 import * as conventionalcommits from "./src/use_case/fill_in_commit_message/conventionalcommits/mod.ts";
 import * as gitmojiStyle from "./src/use_case/fill_in_commit_message/gitmoji_style/mod.ts";
 
+export type { Config } from "./src/type.ts";
+
 export const externalInterface = {
   git,
   gitHub,
