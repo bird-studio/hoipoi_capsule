@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# refs https://github.com/caderek/gramma
+# npm i gramma -g
+
+exec < /dev/tty npx gramma check -m ".git/COMMIT_EDITMSG"
