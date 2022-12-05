@@ -1,6 +1,6 @@
 // deno run --allow-net --allow-write --allow-run --allow-read demo/fill_in_commit_message/gitmoji_style.ts
 
-import * as hoipoiCapsule from "../../hoipoi_capsule.ts";
+import * as hoipoiCapsule from "../../mod.ts";
 
 const o = await hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle
   .initialize();
