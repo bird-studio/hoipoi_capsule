@@ -2,5 +2,6 @@
 
 # refs https://github.com/caderek/gramma
 # npm i gramma -g
+# chmod +x .githooks/commit-msg
 
 exec < /dev/tty npx gramma check -m ".git/COMMIT_EDITMSG"
