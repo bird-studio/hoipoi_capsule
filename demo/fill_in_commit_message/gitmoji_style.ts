@@ -1,6 +1,23 @@
 // deno run --allow-net --allow-write --allow-run --allow-read demo/fill_in_commit_message/gitmoji_style.ts
 
-import * as hoipoiCapsule from "../../mod.ts";
+import * as hoipoiCapsule from "../../hoipoi_capsule.ts";
+
+const o = await hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle
+  .initialize();
+
+const gitmojiQ = () =>
+  hoipoiCapsule.userInterface.prompt.Select.prompt({
+    message: "Select gitmoji.",
+    search: true,
+    options: o.gitmojis,
+  });
+
+const issueQ = () =>
+  hoipoiCapsule.userInterface.prompt.Select.prompt({
+    message: "Select issue.",
+    search: true,
+    options: o.issues,
+  });
 
 const commitMessageTemplate = `{{gitmoji}}: {{summary}} Close #{{issue}}
 
@@ -11,7 +28,7 @@ hoipoiCapsule.useCase.fillInCommitMessage.run({
   questionList: [
     {
       target: "gitmoji",
-      q: hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle.qMap.gitmoji,
+      q: gitmojiQ,
     },
     {
       target: "summary",
@@ -19,7 +36,7 @@ hoipoiCapsule.useCase.fillInCommitMessage.run({
     },
     {
       target: "issue",
-      q: hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle.qMap.issue,
+      q: issueQ,
       fixCommitMessage: hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle
         .fixCommitMessageMap.issue,
     },
