@@ -1,4 +1,4 @@
-import { Config, userInterface } from "./hoipoi_capsule.ts";
+import { Config, userInterface } from "./mod.ts";
 
 export const config: Config = {
   color: {
