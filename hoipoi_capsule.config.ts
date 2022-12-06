@@ -2,7 +2,7 @@ import { Config, userInterface } from "./mod.ts";
 
 export const config: Config = {
   color: {
-    border: userInterface.prompt.colors.green,
-    target: userInterface.prompt.colors.bold.green,
+    border: userInterface.prompt.colors.red,
+    target: userInterface.prompt.colors.bold.red,
   },
 };
