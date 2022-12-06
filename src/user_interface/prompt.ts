@@ -1,7 +1,6 @@
 import { colors, prompt, Table } from "../../deps.ts";
 export { wait } from "../../deps.ts";
 export { colors } from "../../deps.ts";
-import { FindConfig } from "../util/FindConfig.ts";
 import type { ColorSetter } from "../type.ts";
 
 export const Input = prompt.Input;
@@ -25,19 +24,12 @@ const targetHighlighter: TargetHighlighter = (p) =>
 
 type Render = (
   p: { value: string; target: string },
-) => Promise<void>;
-export const render: Render = async (p) => {
-  const r = await FindConfig.run();
-
-  const colorSetter = r?.config
-    ? {
-      border: r.config.color.border,
-      highlight: r.config.color.target,
-    }
-    : {
-      border: _borderColorSetter,
-      highlight: _highlightColorSetter,
-    };
+) => void;
+export const render: Render = (p) => {
+  const colorSetter = {
+    border: _borderColorSetter,
+    highlight: _highlightColorSetter,
+  };
 
   const body = targetHighlighter({
     ...p,
