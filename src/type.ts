@@ -1,4 +1,4 @@
-export type ColorSetter = (p: string) => string;
+type ColorSetter = (p: string) => string;
 
 export type Config = {
   color: {
