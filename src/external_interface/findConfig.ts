@@ -9,6 +9,10 @@ type FindConfig = () => Promise<
 >;
 export const findConfig: FindConfig = () =>
   import(configFile).then((v) => {
+    console.log({ configFile });
     console.log({ v });
     return v;
-  }).catch(() => null);
+  }).catch((e) => {
+    console.log({ configFile });
+    console.log({ e });
+  });
