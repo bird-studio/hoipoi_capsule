@@ -3,5 +3,5 @@
 if [[ "$(git config --get my.interactive)" = yes ]];then
     # git -c my.interactive=yes commit
 
-    exec < /dev/tty deno run --allow-net --allow-write --allow-run --allow-read demo/fill_in_commit_message/gitmoji_style.ts
+    exec < /dev/tty deno run --allow-net --allow-write --allow-run --allow-read demo/fill_in_commit_message/gitmoji_style.ts --a="/Volumes/workspace/bird-studio/hoipoi_capsule/hoipoi_capsule.config.ts"
 fi
