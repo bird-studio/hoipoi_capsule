@@ -28,4 +28,3 @@ export const preset = {
     gitmojiStyle,
   },
 } as const;
-////
