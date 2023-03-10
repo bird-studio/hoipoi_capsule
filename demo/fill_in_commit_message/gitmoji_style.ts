@@ -5,11 +5,30 @@ import * as hoipoiCapsule from "../../mod.ts";
 const o = await hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle
   .initialize();
 
+const line = {
+  name: hoipoiCapsule.userInterface.prompt.colors.yellow("---------"),
+  value: "",
+  disabled: true,
+};
+
 const gitmojiQ = () =>
   hoipoiCapsule.userInterface.prompt.Select.prompt({
     message: "Select gitmoji.",
     search: true,
     options: o.gitmojis,
+  });
+
+const scopeQ = () =>
+  hoipoiCapsule.userInterface.prompt.Select.prompt({
+    message: "Select scope.",
+    search: true,
+    options: [
+      { name: "_", value: "_" },
+
+      line,
+      { name: "conventionalcommits", value: "conventionalcommits" },
+      { name: "gitmoji_style", value: "gitmoji_style" },
+    ],
   });
 
 const issueQ = () =>
@@ -19,9 +38,10 @@ const issueQ = () =>
     options: o.issues,
   });
 
-const commitMessageTemplate = `{{gitmoji}}: {{summary}} Close #{{issue}}
+const commitMessageTemplate =
+  `{{gitmoji}}({{scope}}): {{summary}} Close #{{issue}}
 
-{{body}}`;
+  {{body}}`;
 
 hoipoiCapsule.useCase.fillInCommitMessage.run({
   commitMessageTemplate,
@@ -29,6 +49,10 @@ hoipoiCapsule.useCase.fillInCommitMessage.run({
     {
       target: "gitmoji",
       q: gitmojiQ,
+    },
+    {
+      target: "scope",
+      q: scopeQ,
     },
     {
       target: "summary",
