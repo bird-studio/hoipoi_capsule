@@ -41,7 +41,7 @@ const issueQ = () =>
 const commitMessageTemplate =
   `{{gitmoji}}({{scope}}): {{summary}} Close #{{issue}}
 
-  {{body}}`;
+{{body}}`;
 
 hoipoiCapsule.useCase.fillInCommitMessage.run({
   commitMessageTemplate,
