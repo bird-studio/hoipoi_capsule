@@ -14,7 +14,13 @@ type FetchIssues = () =>
 
 export const fetchIssues: FetchIssues = () =>
   deno.run({
-    cmd: ["gh", "issue", "list", "--assignee=@me", "--json=number,title"],
+    cmd: "gh",
+    args: [
+      "issue",
+      "list",
+      "--assignee=@me",
+      "--json=number,title",
+    ],
   })
     .then<IssuesStruct>((v) => {
       if (typeof v !== "string") {
