@@ -1,18 +1,16 @@
 type Run = (pa: {
-  cmd: Array<string>;
+  cmd: string;
+  args: Array<string>;
 }) => Promise<string | void>;
-export const run: Run = async (pa) => {
-  const p = Deno.run({
-    cmd: pa.cmd,
+export const run: Run = (pa) => {
+  const cmd = new Deno.Command(pa.cmd, {
     stdout: "piped",
     stderr: "piped",
+    args: pa.args,
   });
 
-  await p.status().catch(console.error);
-  p.close();
-
-  return p.output()
-    .then((v) => new TextDecoder().decode(v)).catch(console.error);
+  return cmd.output()
+    .then((v) => new TextDecoder().decode(v.stdout)).catch(console.error);
 };
 
 type WriteTextFile = (p: { path: string; data: string }) => Promise<void>;
