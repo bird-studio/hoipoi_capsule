@@ -1,4 +1,4 @@
-# Hoipoi capsule
+# hoipoi capsule
 
 ## What is this?
 
