@@ -5,10 +5,6 @@ import * as error from "../../../util/error.ts";
 import * as util from "../util.ts";
 
 const findSemver = (p: string | null) => {
-  if (p === null) {
-    return "x.x.x";
-  }
-
   if (p === "patch") {
     return "x.x.o";
   }
@@ -21,7 +17,7 @@ const findSemver = (p: string | null) => {
     return "o.x.x";
   }
 
-  return "_._._";
+  return "x.x.x";
 };
 
 export const initialize = () => {
@@ -51,7 +47,7 @@ export const initialize = () => {
             name: `${v.emoji}[${
               v.semver.replaceAll(".", "")
             }]: ${v.description}`,
-            value: `${v.code}[${v.semver}]`,
+            value: `${v.code}|${v.semver}|`,
           })),
       }),
     )
