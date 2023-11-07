@@ -1,16 +1,12 @@
-name: Auto Assign
-
 on:
   pull_request:
-    types:
-      - opened
-      - reopened
+    types: [opened]
+  issues:
+    types: [opened]
 
 jobs:
-  add_labels:
+  autoAssing:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-ecosystem/action-add-assignees@v1
-        with:
-          github_token: ${{ secrets.github_token }}
-          assignees: ${{ github.actor }}
+      - name: Auto assing
+        uses: technote-space/assign-author@v1
