@@ -44,10 +44,10 @@ export const initialize = () => {
             semver: findSemver(v.semver),
           }))
           .map((v) => ({
-            name: `${v.emoji}|${
+            name: `${v.emoji}\`${
               v.semver.replaceAll(".", "")
-            }|: ${v.description}`,
-            value: `${v.code}|${v.semver}|`,
+            }\`: ${v.description}`,
+            value: `${v.code}\`${v.semver}\``,
           })),
       }),
     )
