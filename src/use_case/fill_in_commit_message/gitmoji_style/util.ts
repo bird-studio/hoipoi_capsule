@@ -29,7 +29,7 @@ export const initialize = () => {
     gitHub.fetchIssues(),
   ])
     .then(
-      ([{ gitmojis }, issues]) => ({
+      ([gitmojis, issues]) => ({
         issues: [
           util.skip,
           util.separate,
