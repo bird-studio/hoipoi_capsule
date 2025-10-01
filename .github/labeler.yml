@@ -1,7 +1,7 @@
 version: v1
 
 labels:
-  - label: "xxx"
+  - label: "xxx2"
     sync: true
     matcher:
       commits: ":.+:`x.x.x`\\(.+\\): .*"
