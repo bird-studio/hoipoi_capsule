@@ -17,6 +17,6 @@ labels:
     matcher:
       commits: ":`x.x.x`\\(.\\): .*"
 
-  - label: "x.x.x"
+  - label: "test"
     matcher:
       commits: "test"
