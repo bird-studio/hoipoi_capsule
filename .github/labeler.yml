@@ -4,4 +4,4 @@ labels:
   - label: "xxx"
     sync: true
     matcher:
-      commits: "`x.x.x` .*"
+      commits: ":.+:`x.x.x`\\(.+\\): .*"
