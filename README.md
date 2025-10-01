@@ -143,11 +143,3 @@ const typeQ = () =>
 <video controls playsinline width="100%" autoplay loop muted="true" src="https://user-images.githubusercontent.com/92862731/202081954-dc908df9-70d8-436a-8ad9-fa5d91cd1280.mov" type="video/mp4" >
  Sorry, your browser doesn't support embedded videos.
 </video>
-
-## Grammar Check
-
-- [gramma](https://github.com/caderek/gramma)
-
-Create
-[commit-msg](https://github.com/bird-studio/hoipoi_capsule/blob/main/.githooks/commit-msg).
-It works well with this system.
