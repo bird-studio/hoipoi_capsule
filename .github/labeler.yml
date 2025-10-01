@@ -13,3 +13,7 @@ labels:
     sync: true
     matcher:
       commits: ":.+:`x.x.x`(.+): .*"
+  - label: "xxx"
+    sync: true
+    matcher:
+      commits: "`x.x.x`"
