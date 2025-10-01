@@ -8,6 +8,9 @@
       "integrity": "sha512-28sothO0+6UuXx0fnJXi4kqy2/dKeFN3xL2Ss5k5K5ECBJMi5T2kZLY92xys3/+YD+AgKHgeiw7YQpYKnkCLMg=="
     }
   },
+  "redirects": {
+    "https://deno.land/x/hoipoi_capsule/mod.ts": "https://deno.land/x/hoipoi_capsule@v3.0.2/mod.ts"
+  },
   "remote": {
     "https://deno.land/std@0.170.0/_util/asserts.ts": "d0844e9b62510f89ce1f9878b046f6a57bf88f208a10304aab50efcb48365272",
     "https://deno.land/std@0.170.0/_util/os.ts": "8a33345f74990e627b9dfe2de9b040004b08ea5146c7c9e8fe9a29070d193934",
@@ -62,12 +65,14 @@
     "https://deno.land/std@0.198.0/path/win32.ts": "8b3f80ef7a462511d5e8020ff490edcaa0a0d118f1b1e9da50e2916bdd73f9dd",
     "https://deno.land/x/cliffy@v0.25.7/_utils/distance.ts": "02af166952c7c358ac83beae397aa2fbca4ad630aecfcd38d92edb1ea429f004",
     "https://deno.land/x/cliffy@v0.25.7/ansi/ansi_escapes.ts": "885f61f343223f27b8ec69cc138a54bea30542924eacd0f290cd84edcf691387",
+    "https://deno.land/x/cliffy@v0.25.7/ansi/chain.ts": "31fb9fcbf72fed9f3eb9b9487270d2042ccd46a612d07dd5271b1a80ae2140a0",
     "https://deno.land/x/cliffy@v0.25.7/ansi/colors.ts": "5f71993af5bd1aa0a795b15f41692d556d7c89584a601fed75997df844b832c9",
     "https://deno.land/x/cliffy@v0.25.7/ansi/cursor_position.ts": "d537491e31d9c254b208277448eff92ff7f55978c4928dea363df92c0df0813f",
     "https://deno.land/x/cliffy@v0.25.7/ansi/deps.ts": "0f35cb7e91868ce81561f6a77426ea8bc55dc15e13f84c7352f211023af79053",
     "https://deno.land/x/cliffy@v0.25.7/ansi/tty.ts": "8fb064c17ead6cdf00c2d3bc87a9fd17b1167f2daa575c42b516f38bdb604673",
     "https://deno.land/x/cliffy@v0.25.7/keycode/key_code.ts": "c4ab0ffd102c2534962b765ded6d8d254631821bf568143d9352c1cdcf7a24be",
     "https://deno.land/x/cliffy@v0.25.7/keycode/key_codes.ts": "917f0a2da0dbace08cf29bcfdaaa2257da9fe7e705fff8867d86ed69dfb08cfe",
+    "https://deno.land/x/cliffy@v0.25.7/keycode/mod.ts": "292d2f295316c6e0da6955042a7b31ab2968ff09f2300541d00f05ed6c2aa2d4",
     "https://deno.land/x/cliffy@v0.25.7/prompt/_generic_input.ts": "737cff2de02c8ce35250f5dd79c67b5fc176423191a2abd1f471a90dd725659e",
     "https://deno.land/x/cliffy@v0.25.7/prompt/_generic_list.ts": "79b301bf09eb19f0d070d897f613f78d4e9f93100d7e9a26349ef0bfaa7408d2",
     "https://deno.land/x/cliffy@v0.25.7/prompt/_generic_prompt.ts": "8630ce89a66d83e695922df41721cada52900b515385d86def597dea35971bb2",
@@ -93,6 +98,24 @@
     "https://deno.land/x/cliffy@v0.25.7/table/row.ts": "5f519ba7488d2ef76cbbf50527f10f7957bfd668ce5b9169abbc44ec88302645",
     "https://deno.land/x/cliffy@v0.25.7/table/table.ts": "ec204c9d08bb3ff1939c5ac7412a4c9ed7d00925d4fc92aff9bfe07bd269258d",
     "https://deno.land/x/cliffy@v0.25.7/table/utils.ts": "187bb7dcbcfb16199a5d906113f584740901dfca1007400cba0df7dcd341bc29",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/deps.ts": "6213b644aa84adb023c106dbea68f8eb51d2bec8a89cd2209245e29868cc4a38",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/mod.ts": "4d47486ffb6ab1f945b090394a7032e3791e644b82ae1e468617ccfd48a7e3b6",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/external_interface/deno.ts": "92b1b731d0e62eda51997a1e47069c09f769b7f76d3ed09e196dc6af6b9025f6",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/external_interface/git.ts": "22155ba1bbad040e71b24429b33fb646cc132f1ff20652c19add685c23c9ebf1",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/external_interface/gitHub.ts": "75b11ba98516b38df5b2a5a37899422a96a1a2cae9ee958355a39daa793a7a57",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/external_interface/gitmoji.ts": "0e1ce510d41ccea182cd1fa2a872f4e50637f98386153e8a2c9c5dbf7b8f0a28",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/type.ts": "434b44bd90f679fb577f9201690cd2280d1ac205d99ea8a5ea3f1eb1ddda7cbd",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/use_case/fill_in_commit_message/conventionalcommits/mod.ts": "fbf92916d83905dbe4236c15b0739c37f85549afb63947244a00a3d08d9f9ab1",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/use_case/fill_in_commit_message/conventionalcommits/preset.ts": "46232ffd6b217f8dc63cb52b0c3eafdfecb4d363459e061d48163f76193b1576",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/use_case/fill_in_commit_message/fillIn_commit_message.ts": "f537adc9727b7e587884306220e585b0958e9b7043aa7883a0ad35e5f6e5cd76",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/use_case/fill_in_commit_message/gitmoji_style/mod.ts": "776db568aa18094d20db020ce13edda4b781321c3547a0a39e35ceeb75662a92",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/use_case/fill_in_commit_message/gitmoji_style/preset.ts": "668bb9e5d5f448079a68dada4d8c9c778a77f5f5915747c3b83875f5eb226006",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/use_case/fill_in_commit_message/gitmoji_style/util.ts": "2eb8f9c53aff7105f7401be3daa5ab62a2daa403677fd81eb5172ee9c714d8e7",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/use_case/fill_in_commit_message/mod.ts": "9f6069ddf875b3da668fddf0b5e6c50f3de3c085744586cdd09c45e64f32f560",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/use_case/fill_in_commit_message/type.ts": "85ecb6a71eeb0570b707576a7c1bd8dc035fabd4a2d33530d61baac1748610be",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/use_case/fill_in_commit_message/util.ts": "8b9f4af898b5d2d975aace5f142e32d944e8af4fde94fd5c81129545708382f9",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/user_interface/prompt.ts": "64a3fed8a60e8c28ed839b7a682b8bcfc66a13b6e1f300c98107240ac31e8e4a",
+    "https://deno.land/x/hoipoi_capsule@v3.0.2/src/util/error.ts": "8a31de6a31bd81625dab758394c4295ed593bcd3807bde18854f70f3a53fd543",
     "https://deno.land/x/tty@0.1.4/ansi_regex.ts": "1d3b0c7289164f93c9ebafe3bbd05a723568a250cc5c29c0cc922ff55af9a238",
     "https://deno.land/x/tty@0.1.4/combining.ts": "a615e9479d8bc901e3a727e5cae83c0aa1d4ca1e75fa040861d9905d16b30ffc",
     "https://deno.land/x/tty@0.1.4/is_interactive.ts": "37080d92399827215e60a57d97013aefbdbc038e7a5d2346abd298a7010525e6",
@@ -105,6 +128,7 @@
     "https://deno.land/x/wait@0.1.13/deps.ts": "df762b698a00cd71463cf24cea0737d5ae49f50957c9cfcc15f7e15a5a5cad9f",
     "https://deno.land/x/wait@0.1.13/log_symbols.ts": "cdf2d0aa44754d10fddd55999e933886a4d753f2acfc1219f629427ccc776ac7",
     "https://deno.land/x/wait@0.1.13/mod.ts": "83211441439cd0f794f4e95fbb6c766929dd6886169100d3bdf2ea1ea5e3adfe",
-    "https://deno.land/x/wait@0.1.13/spinners.ts": "289346d54f8d6152a5dcd67b67e47784cf9b7a8a8f6f0b6dc041ebc2ef6bb76c"
+    "https://deno.land/x/wait@0.1.13/spinners.ts": "289346d54f8d6152a5dcd67b67e47784cf9b7a8a8f6f0b6dc041ebc2ef6bb76c",
+    "https://raw.githubusercontent.com/carloscuesta/gitmoji/master/packages/gitmojis/src/gitmojis.json": "c844e6c6183d8e0177b31170b28c0ed92a3ca518c13db41428f6aaf3796a468b"
   }
 }
