@@ -16,9 +16,9 @@ type TargetHighlighter = (
 ) => string;
 const targetHighlighter: TargetHighlighter = (p) =>
   p.value
-    .replace(p.target, _highlightColorSetter(p.target))
-    .replace(new RegExp("{{", "g"), "")
-    .replace(new RegExp("}}", "g"), "");
+    .replace(`{{${p.target}}}`, _highlightColorSetter(p.target))
+    .replaceAll("{{", "")
+    .replaceAll("}}", "");
 
 type Render = (
   p: { value: string; target: string },

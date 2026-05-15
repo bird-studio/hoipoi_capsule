@@ -1,3 +1,3 @@
-// deno-lint-ignore-file
-export const fetchGitmojis = () =>
-  import("npm:gitmojis").then((m) => m.gitmojis);
+import { gitmojis } from "gitmojis";
+
+export const fetchGitmojis = () => Promise.resolve(gitmojis);

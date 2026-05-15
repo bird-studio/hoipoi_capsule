@@ -14,7 +14,7 @@ Create a commit message in an interactive format.
 # Go to git directory
 brew install deno
 
-deno run --allow-net --allow-write --allow-run "https://deno.land/x/hoipoi_capsule/demo/fill_in_commit_message/conventionalcommits_style.ts?source"
+deno run --allow-net --allow-write --allow-run --allow-read "https://deno.land/x/hoipoi_capsule/demo/fill_in_commit_message/conventionalcommits_style.ts?source"
 cat .git/COMMIT_EDITMSG
 ```
 
@@ -37,7 +37,7 @@ mkdir .githooks
 cat <<EOF > .githooks/prepare-commit-msg
 #!/bin/sh
 
-exec < /dev/tty deno run --allow-net --allow-write --allow-run "https://deno.land/x/hoipoi_capsule/demo/fill_in_commit_message/conventionalcommits_style.ts?source"
+exec < /dev/tty deno run --allow-net --allow-write --allow-run --allow-read "https://deno.land/x/hoipoi_capsule/demo/fill_in_commit_message/conventionalcommits_style.ts?source"
 
 EOF
 
@@ -59,7 +59,7 @@ Here is a reference.
 
 - [conventionalcommits_style](https://github.com/bird-studio/hoipoi_capsule/blob/main/demo/fill_in_commit_message/conventionalcommits_style.ts)
 
-```ts
+```ts ignore
 import * as hoipoiCapsule from "https://deno.land/x/hoipoi_capsule/mod.ts";
 
 const commitMessageTemplate = `{{type}}({{scope}}): {{summary}}
@@ -121,7 +121,7 @@ const typeQ = () =>
       },
       { name: "Docs: Documentation only changes", value: "Docs" },
       { name: "Feat: A new feature", value: "Feat" },
-      { name: "Fix: A bug fix", value: "Fix:" },
+      { name: "Fix: A bug fix", value: "Fix" },
       { name: "Perf: A code change that improves performance", value: "Perf" },
       {
         name:

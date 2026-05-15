@@ -1,4 +1,4 @@
-type Answer = string | number;
+type Answer = string;
 export type CommitMessage = string;
 
 export type FixCommitMessage = (
