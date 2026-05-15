@@ -1,4 +1,4 @@
-export const skip = { name: "-skip-", value: "-skip-" };
+export const skip = { name: "-skip-", value: "__HOIPOI_SKIP__" };
 
 export const separate = {
   name: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",

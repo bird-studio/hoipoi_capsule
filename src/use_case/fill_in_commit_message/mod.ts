@@ -1,1 +1,1 @@
-export { run } from "./fillIn_commit_message.ts";
+export { run } from "./fill_in_commit_message.ts";

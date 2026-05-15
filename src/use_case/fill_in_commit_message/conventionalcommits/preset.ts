@@ -19,7 +19,7 @@ const typeQ = () =>
       },
       { name: "Docs: Documentation only changes", value: "Docs" },
       { name: "Feat: A new feature", value: "Feat" },
-      { name: "Fix: A bug fix", value: "Fix:" },
+      { name: "Fix: A bug fix", value: "Fix" },
       { name: "Perf: A code change that improves performance", value: "Perf" },
       {
         name:
@@ -78,7 +78,7 @@ const bodyQ = () =>
 
 const breakingChangeQ = () =>
   prompt.Input.prompt({
-    message: "Enter body.",
+    message: "Enter breaking change.",
   });
 
 export const qMap = {
@@ -100,7 +100,7 @@ const fixBody: type.FixCommitMessage = (p) => {
   if (p.answerMap["body"]) {
     return p.commitMessage;
   }
-  return p.commitMessage.replace(/\r?\n{3}/, "\n");
+  return p.commitMessage.replace(/(\r?\n){3}/, "\n");
 };
 
 const fixBreakingChange: type.FixCommitMessage = (p) => {

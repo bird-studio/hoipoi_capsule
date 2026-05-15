@@ -18,26 +18,26 @@ const summaryQ = () =>
 
 const bodyQ = () =>
   prompt.Input.prompt({
-    message: "Enter body",
+    message: "Enter body.",
   });
 
 export const qMap = {
   summary: summaryQ,
-  bodyQ: bodyQ,
+  body: bodyQ,
 } as const;
 
 const fixIssue: type.FixCommitMessage = (p) => {
   if (p.answerMap["issue"] !== baseUtil.skip.value) {
     return p.commitMessage;
   }
-  return p.commitMessage.replace(`Close #${baseUtil.skip.value}`, "").trim();
+  return p.commitMessage.replace(` Close #${baseUtil.skip.value}`, "").trim();
 };
 
 const fixBody: type.FixCommitMessage = (p) => {
   if (p.answerMap["body"]) {
     return p.commitMessage;
   }
-  return p.commitMessage.replace(/\r?\n{2,}/, "\n").trim();
+  return p.commitMessage.replace(/(\r?\n){2,}/, "\n").trim();
 };
 
 export const fixCommitMessageMap = {

@@ -60,7 +60,7 @@ hoipoiCapsule.useCase.fillInCommitMessage.run({
     },
     {
       target: "body",
-      q: hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle.qMap.bodyQ,
+      q: hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle.qMap.body,
       fixCommitMessage: hoipoiCapsule.preset.fillInCommitMessage.gitmojiStyle
         .fixCommitMessageMap.body,
     },

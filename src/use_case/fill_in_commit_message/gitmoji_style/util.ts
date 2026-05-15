@@ -1,6 +1,6 @@
 import { wait } from "../../../user_interface/prompt.ts";
 import * as gitmoji from "../../../external_interface/gitmoji.ts";
-import * as gitHub from "../../../external_interface/gitHub.ts";
+import * as gitHub from "../../../external_interface/github.ts";
 import * as error from "../../../util/error.ts";
 import * as util from "../util.ts";
 
