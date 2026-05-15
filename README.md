@@ -92,7 +92,7 @@ hoipoiCapsule.useCase.fillInCommitMessage.run({
        */
       fixCommitMessage: (p) => {
         if (p.answerMap["type"] === "???") {
-          return p.commitMessage.replace(/\r?\n{2,}/, "\n").trim();
+          return p.commitMessage.replace(/(\r?\n){2,}/, "\n").trim();
         }
         return p.commitMessage;
       },
