@@ -32,7 +32,7 @@ const fillInCommitMessage: FillInCommitMessage = async (p) => {
   const commitMessage = (() => {
     const _commitMessage = p.commitMessage.replaceAll(
       `{{${qObj.target}}}`,
-      answer,
+      () => answer,
     );
 
     if (!qObj.fixCommitMessage) {
